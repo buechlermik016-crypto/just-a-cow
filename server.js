@@ -60,7 +60,7 @@ app.post("/api/cowify", upload.single("image"), async (req, res) => {
       "Transform the subject into a cute cartoon cow version. Keep the pose and framing similar, add cow spots, small horns, and a friendly snout. Match the linework, palette, and facial style of the reference cow image. Clean, lighthearted, professional cartoon style."
     );
     formData.append(
-      "image",
+      "image[]",
       new Blob([req.file.buffer], { type: req.file.mimetype || "image/png" }),
       "upload.png"
     );
@@ -69,7 +69,7 @@ app.post("/api/cowify", upload.single("image"), async (req, res) => {
     if (referencePath) {
       const referenceBuffer = fs.readFileSync(referencePath);
       formData.append(
-        "image",
+        "image[]",
         new Blob([referenceBuffer], { type: getMimeType(referencePath) }),
         path.basename(referencePath)
       );
