@@ -159,9 +159,14 @@ if (runButton) {
         body: formData,
       });
 
-      const data = await response.json();
+      const contentType = response.headers.get("content-type") || "";
+      const isJson = contentType.includes("application/json");
+      const data = isJson ? await response.json() : { error: await response.text() };
       if (!response.ok) {
         throw new Error(data.error || "Cowify failed.");
+      }
+      if (!isJson) {
+        throw new Error("Unexpected response from server.");
       }
 
       outputImageUrl = data.image;

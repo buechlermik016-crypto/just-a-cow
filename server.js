@@ -7,7 +7,7 @@ const app = express();
 const upload = multer({
   storage: multer.memoryStorage(),
   limits: {
-    fileSize: 5 * 1024 * 1024,
+    fileSize: 10 * 1024 * 1024,
   },
 });
 
@@ -100,6 +100,16 @@ app.post("/api/cowify", upload.single("image"), async (req, res) => {
   } catch (error) {
     return res.status(500).json({ error: "Cowify failed." });
   }
+});
+
+app.use((err, req, res, next) => {
+  if (err instanceof multer.MulterError) {
+    return res.status(400).json({ error: err.message });
+  }
+  if (err) {
+    return res.status(500).json({ error: "Upload failed." });
+  }
+  return next();
 });
 
 const port = process.env.PORT || 3000;
