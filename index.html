@@ -1,0 +1,173 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Just a Cow ($COW) - Lighthearted Memecoin</title>
+  <meta name="description" content="Just a Cow ($COW) is a lighthearted, professional memecoin with a playful cartoon vibe." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-shape shape-a"></div>
+  <div class="bg-shape shape-b"></div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">
+        <img src="cow.jpg" alt="Just a Cow logo" class="brand-logo" />
+        <div class="brand-text">
+          <span class="brand-name">just a cow</span>
+          <span class="brand-ticker">ticker $COW</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#pfp">PFP</a>
+        <a href="#team">Team</a>
+        <a href="#token">Token</a>
+        <a href="https://x.com/i/communities/2013292641149231309" target="_blank" rel="noreferrer">Community</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">just a cow memecoin</p>
+          <h1>Just a cow. Big vibes.</h1>
+          <p class="contract-line">Contract: <span>FWGVnrMCqaBQ2TcRrMtVyaYThk1iWupKSfVKwUWwJ9dx</span></p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://www.fwog.fun/pond/FWGVnrMCqaBQ2TcRrMtVyaYThk1iWupKSfVKwUWwJ9dx" target="_blank" rel="noreferrer">Buy on fwog.fun</a>
+            <a class="btn btn-ghost" href="https://x.com/i/communities/2013292641149231309" target="_blank" rel="noreferrer">Join the herd</a>
+          </div>
+          <div class="stats">
+            <div>
+              <span class="stat-label">Ticker</span>
+              <span class="stat-value">$COW</span>
+            </div>
+            <div>
+              <span class="stat-label">Launch</span>
+              <span class="stat-value">fwog.fun</span>
+            </div>
+            <div>
+              <span class="stat-label">Vibe</span>
+              <span class="stat-value">Literally just a cow</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pfp" class="section section-highlight pfp-spotlight">
+      <div class="container pfp-grid">
+        <div class="pfp-copy reveal">
+          <p class="eyebrow">pfp generator</p>
+          <h2>Cowify your PFP</h2>
+        </div>
+        <div class="pfp-tool reveal">
+          <div class="pfp-preview" id="pfp-preview-wrap">
+            <img id="pfp-preview" alt="Cowified preview" />
+            <div class="pfp-placeholder" id="pfp-placeholder">Upload to cowify</div>
+            <div class="pfp-loading" id="pfp-loading" aria-live="polite">
+              <div class="cow-loader" aria-hidden="true">
+                <span class="spot"></span>
+                <span class="spot"></span>
+                <span class="spot"></span>
+                <span class="bell"></span>
+              </div>
+              <span class="loading-text">Mooing...</span>
+            </div>
+          </div>
+          <div class="pfp-actions">
+            <input type="file" id="pfp-upload" class="pfp-input" accept="image/*" />
+            <label class="btn btn-primary" for="pfp-upload">Upload image</label>
+            <button class="btn btn-ghost" id="pfp-run" type="button">Cowify</button>
+            <button class="btn btn-copy" id="pfp-download" type="button" disabled>Download cow</button>
+          </div>
+          <p class="pfp-status" id="pfp-status">Ready to cowify.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="team" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">the team</p>
+          <h2>Meet the cows</h2>
+        </div>
+        <div class="herd-grid">
+          <figure class="herd-card reveal">
+            <img src="derpy.jpeg" alt="Derpy cow profile" />
+            <figcaption>Community Lead</figcaption>
+          </figure>
+          <figure class="herd-card reveal">
+            <img src="dev.jpeg" alt="Dev cow profile" />
+            <figcaption>Product Builder</figcaption>
+          </figure>
+          <figure class="herd-card reveal">
+            <img src="swiss.png" alt="Swiss cow profile" />
+            <figcaption>Strategy</figcaption>
+          </figure>
+          <figure class="herd-card reveal">
+            <img src="ascii.jpeg" alt="Ascii cow profile" />
+            <figcaption>Art Direction</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">about just a cow</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <h3>Cartoon charm</h3>
+            <p>Bold shapes and friendly colors.</p>
+          </article>
+          <article class="feature-card reveal">
+            <h3>Community first</h3>
+            <p>Herd energy on fwog.fun.</p>
+          </article>
+          <article class="feature-card reveal">
+            <h3>Clean delivery</h3>
+            <p>Simple, trusted messaging.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="token" class="section section-highlight">
+      <div class="container token-grid">
+        <div class="token-card reveal">
+          <h2>Token</h2>
+          <ul>
+            <li><span>Contract</span><strong>FWGVnrMCqaBQ2TcRrMtVyaYThk1iWupKSfVKwUWwJ9dx</strong></li>
+            <li><span>Ticker</span><strong>$COW</strong></li>
+            <li><span>Launchpad</span><strong>fwog.fun</strong></li>
+          </ul>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://www.fwog.fun/pond/FWGVnrMCqaBQ2TcRrMtVyaYThk1iWupKSfVKwUWwJ9dx" target="_blank" rel="noreferrer">View on fwog.fun</a>
+            <button class="btn btn-ghost" data-copy="FWGVnrMCqaBQ2TcRrMtVyaYThk1iWupKSfVKwUWwJ9dx">Copy address</button>
+          </div>
+        </div>
+        <div class="token-banner reveal">
+          <img src="banner.png" alt="Just a Cow banner" />
+          <div class="banner-overlay">
+            <h3>Built for the herd</h3>
+            <p>Simple, fun, and on fwog.fun.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
